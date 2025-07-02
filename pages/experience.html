@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../script/script.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="px-3 py-2 text-bg-dark border-bottom">
+        <div class="container">
+          <div
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+          >
+            <a
+              href="../index.html"
+              class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
+            >
+              <img src="../images/KW.png" height="50px" width="100px" />
+            </a>
+            <ul
+              class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small"
+            >
+              <li>
+                <a href="../index.html" class="nav-link text-white">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  ></svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="./about-me.html" class="nav-link text-white">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  ></svg>
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a href="./experience.html" class="nav-link text-secondary">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  ></svg>
+                  Experience
+                </a>
+              </li>
+              <li>
+                <a href="./skills.html" class="nav-link text-white">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  ></svg>
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a href="./contact-me.html" class="nav-link text-white">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#people-circle"></use>
+                  </svg>
+                  Contact Me
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ExpAcad-header">
+      <div class="d-flex gap-2 justify-content-center py-4 div-second-header-experience">
+        <button
+          id="btn1-experience"
+          class="btn bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill col-3"
+          onclick='changeButtonToClicked("btn1-experience","btn2-experience")'>
+          Experience
+        </button>
+
+        <button
+          id="btn2-experience"
+          class="btn bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill col-3"
+          onclick='changeButtonToClicked("btn2-experience","btn1-experience")'>
+          Education
+        </button>
+      </div>
+    </section>
+
+    <section id="Experience-content">
+      <div class="div-experience-education-history" id="div-experience-history">
+        <div class="container py-2 pt-5 px-5 mx-5" >
+          <div class="card mb-3 shadow-sm rounded-4 border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-1">DevOps Specialist</h4>
+              <h6 class="text-muted mb-2">BNP Paribas Group Service Center | April 2025 – Present</h6>
+              <ul >
+                <li>
+                  Significant contribution to server migration.
+                </li>
+                <li>
+                  Involvment in maintaining and improving the CI/CD processes
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container py-2 px-5 mx-5">
+          <div class="card mb-3 shadow-sm rounded-4 border-0">
+            <div class="card-body">
+              <h4 class="card-title mb-1">AI Model Developer & Credit Risk Specialist</h4>
+              <h6 class="card-title mb-1">Junior Credit Risk Specialist</h6>
+              <h6 class="text-muted mb-2">BNP Paribas Group Service Center | September 2022 – March 2025</h6>
+              <ul>
+                <li>Development and implementation of 5 computer vision models for image processing on a car sales platform (CNN, DETR, ResNet, DIS Background Removal).</li>
+                <li>Co-development of a recommendation system for a leasing platform.</li>
+                <li>Validation and monitoring of credit risk models (IFRS).</li>
+                <li>Development of a default risk model.</li>
+                <li>Design and implementation of algorithms for automating data analysis and monitoring predictive models.</li>
+                <li>Collaboration with clients and presentation of model results, addressing their business needs.</li>
+                <li>Mentoring new employees in the AI department, supporting their adaptation and integration into ongoing projects.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-experience-education-history" id="div-education-history" style="display: none;">
+        <div class="pt-5 px-5 mx-5 w-50">
+          <div class="card mb-3 shadow-sm rounded-4 border-0">
+            <div class="card-body div-experience-education-history">
+              <h4 class="card-title mb-1">GFT & GOOGLE CLOUD</h4>
+              <h6 class="text-muted mb-1">Koźmiński University | 2023 - 2024</h6>
+              <h6 class="text-muted mb-1"> Postgraduate Studies</h6>
+
+              <ul >
+                <li>
+                  GCP
+                </li>
+                <li>
+                  BigData
+                </li>
+                <li>
+                  Machine Learning
+                </li>
+                <li>
+                  Kubernetes
+                </li>
+                <li>
+                  Networking
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pt-5 px-5 mx-5 w-50">
+          <div class="card mb-3 shadow-sm rounded-4 border-0">
+            <div class="card-body div-experience-education-history">
+              <h4 class="card-title mb-1">BIG DATA</h4>
+              <h6 class="text-muted mb-1">Warsaw School Of Economics | 2021 - 2023</h6>
+              <h6 class="text-muted mb-1"> Master Studies</h6>
+              <ul >
+                <li>
+                  Machine Learning
+                </li>
+                <li>
+                  Credit risk
+                </li>
+                <li>
+                  Docker
+                </li>
+                <li>
+                  SQL
+                </li>
+                <li>
+                  AWS
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pt-5 px-5 mx-5 w-50">
+          <div class="card mb-3 shadow-sm rounded-4 border-0">
+            <div class="card-body div-experience-education-history">
+              <h4 class="card-title mb-1">BOOTCAMP DATA SCIENCE</h4>
+              <h6 class="text-muted mb-1">Sages | 2021</h6>
+              <h6 class="text-muted mb-1"> Bootcamp</h6>
+              <ul >
+                <li>
+                  Machine Learning
+                </li>
+                <li>
+                  Python
+                </li>
+                <li>
+                  SQL
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pt-5 px-5 mx-5 pb-5 mb-5 w-50">
+          <div class="card mb-3 shadow-sm rounded-4 border-0">
+            <div class="card-body div-experience-education-history">
+              <h4 class="card-title mb-1">FINANCE AND ACCOUNTING</h4>
+              <h6 class="text-muted mb-1">Warsaw School of Economics | 2018 - 2021</h6>
+              <h6 class="text-muted mb-1"> Bachelor studies</h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </body>
+</html>

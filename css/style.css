@@ -1,0 +1,66 @@
+.buttonsKW{
+    background-color: #0047AB;
+}
+
+.heroesKW{
+    background-color: #F9F6EE;
+    margin-bottom: 3rem;
+    border-radius: 10%
+}
+
+.ulKW{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.about-me {
+    background-color: #F9F6EE;
+    max-width: 1260px;
+    display: flex;
+    gap: 5rem;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.aboutMeFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    margin-top: 8.5rem;
+}
+
+.div-img-aboutme{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.div-second-header-experience {
+  background-color: #F9F6EE;
+
+}
+
+.img-aboutme {
+    border-radius: 10%
+  }
+
+.div-experience-education-history{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  @media (min-width: 1260px){
+    .p-aboutme {
+        font-size: 1.2rem;
+      }
+    .about-me{
+      flex-direction : row;
+    }
+    .div-img-aboutme{
+      margin-top: 0rem;
+    }
+  }
