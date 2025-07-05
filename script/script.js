@@ -24,6 +24,7 @@ function changeButtonToClicked(id, id2) {
         elem2.classList.remove("bg-secondary-subtle");
         elem2.classList.remove("border-secondary-subtle");
 
+
         displayExperience = elem1.innerHTML;
     }
     let elem_exp_history = document.getElementById("div-experience-history");
