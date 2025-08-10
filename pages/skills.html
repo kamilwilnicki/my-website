@@ -9,10 +9,12 @@
     rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
     crossorigin="anonymous"
-  />
-  <link rel="stylesheet" href="./css/style.css"/>
+    />
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/skills.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <section id="header">
         <div class="px-3 py-2 text-bg-dark border-bottom">
           <div class="container">
@@ -89,8 +91,156 @@
           </div>
         </div>
       </section>
+      <section id="backend">
+        <h1 class="display-5 fw-bold text-body-emphasis head-row-grid pt-3">Machine Learning</h1>
+        <div class="split card mb-3 shadow-sm rounded-4 border-0">
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+                <h3>Python</h3>
+                <p class="hidden-details">pandas, numpy, scikit-learn, tensorflow, torch</p>
+            </div>
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+              <h3>Machine Learning</h3>
+              <p class="hidden-details">Linear/Logistic Regression, Random Forest, XGBoost</p>
+            </div>
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+              <h3>Computer Vision</h3>
+              <p class="hidden-details">CNN, DIS, ResNet-DITR</p>
+            </div>
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+              <h3>Generative AI</h3>
+              <p class="hidden-details">LLM, RAG</p>
+            </div>
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+              <h3>SQL</h3>
+              <p class="hidden-details">Oracle, mysql</p>
+            </div>
+        </div>
+      </section id="DevOps">
+      <h1 class="display-5 fw-bold text-body-emphasis head-row-grid pt-3">DevOps</h1>
+      <section id="backend">
+        <div class="split card mb-3 shadow-sm rounded-4 border-0">
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+              <h3>Scripting</h3>
+              <p class="hidden-details">Bash, Python</p>
+            </div>
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+              <h3> Container Ecosystem</h3>
+              <p class="hidden-details">Docker, Podman</p>
+            </div>
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+              <h3>Kubernetes</h3>
+              <p class="hidden-details">CKAD, Helm, Kustomization</p>
+            </div>
+            <div class="row-grid">
+              <div class="progress w-100">
+                <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+              <h3>CI/CD tools</h3>
+              <p class="hidden-details">Jenkins, GitLab CI/CD, GitHub Actions</p>
+            </div>
+        </div>
+      </section>
+    </section id="Backend">
+    <section id="backend">
+      <h1 class="display-5 fw-bold text-body-emphasis head-row-grid pt-3">Backend</h1>
+      <div class="split card mb-3 shadow-sm rounded-4 border-0">
+          <div class="row-grid">
+            <div class="progress w-100">
+              <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+            <h3>Python</h3>
+            <p class="hidden-details">Flask</p>
+          </div>
+          <div class="row-grid">
+            <div class="progress w-100">
+              <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+            <h3>Java</h3>
+            <p class="hidden-details">SpringBoot, Thymeleaf, Hibernate, JPA</p>
+          </div>
+          <div class="row-grid">
+            <div class="progress w-100">
+              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+            <h3>JavaScript</h3>
+            <p class="hidden-details">Node.js Express.js</p>
+          </div>
+      </div>
+    </section>
+    <section id="Frontend">
+      <h1 class="display-5 fw-bold text-body-emphasis head-row-grid pt-3">Frontend</h1>
+      <div class="split card mb-3 shadow-sm rounded-4 border-0">
+          <div class="row-grid">
+            <div class="progress w-100">
+              <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+            <h3>HTML & CSS</h3>
+            <p class="hidden-details">Flexbox, Grid, Responsiveness, Bootstrap</p>
+          </div>
+          <div class="row-grid">
+            <div class="progress w-100">
+              <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="row-grid col-pointer" onclick="displayHiddenDetailsSkills(this)">
+            <h3>JavaScript</h3>
+            <p class="hidden-details">Modules, fetch/async, DOM</p>
+          </div>
+      </div>
+    </section>
       <footer class="py-2 my-2 footer mt-auto bg-light">
         <p class="text-center text-body-secondary mt-3">&copy; 2025 Kamil Wilnicki. All rights reserved.</p>
       </footer>
+    <script src="../script/script.js"></script>
 </body>
 </html>

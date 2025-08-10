@@ -1,0 +1,25 @@
+.split {
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr;
+  }
+
+.row-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.col-pointer {
+  cursor: pointer;
+}
+
+.head-row-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-details {
+  display: none
+}

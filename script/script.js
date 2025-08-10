@@ -1,6 +1,5 @@
-let displayExperience;
-displayExperience = "Experience";
-
+// let displayExperience;
+// displayExperience = "Experience";
 function changeButtonToClicked(id, id2) {
     let elem1 = document.getElementById(id);
     let elem2 = document.getElementById(id2);
@@ -38,4 +37,10 @@ function changeButtonToClicked(id, id2) {
         elem_exp_history.style.display = "none";
         elem_hist_history.style.display = "";
     }
+}
+
+function displayHiddenDetailsSkills(element){
+    const details = element.querySelector('.hidden-details')
+    details.style.display =
+        details.style.display === "block" ? "none" : "block"
 }
