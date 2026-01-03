@@ -25,7 +25,7 @@ body {
     display: flex;
     gap: 5rem;
     padding: 2rem;
-    flex-direction: column;
+    flex-direction: stretch;
 }
 
 .aboutMeFlex {
@@ -35,6 +35,50 @@ body {
     height: 100vh;
     margin: 0;
     margin-top: 8.5rem;
+}
+
+.chatFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.chat-main-background {
+    background-color: #F9F6EE;
+    display: flex;
+    padding: 2rem;
+    flex: 1 1 auto;
+    min-height: 100%; 
+    flex-direction: column;
+    width: 70%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+/* .chat-user-input-div {
+  display: flex;
+  padding-top: 1rem;
+  width: 70%;
+  border-radius: 10%;
+  margin-top: 2rem;
+} */
+.chat-user-input-div {
+  display: flex;
+  /* grid-template-columns: 6fr 1fr; */
+  /* gap: 1rem; space between columns */
+  padding-top: 1rem;
+  width: 70%;
+  border-radius: 10%;
+  margin-top: 2rem;
+}
+
+.flex-user-chat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .div-img-aboutme{
@@ -52,6 +96,36 @@ body {
     border-radius: 10%
   }
 
+.chat-message-user {
+  background: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  align-self: flex-end;
+  max-width: 70%
+}
+
+.chat-message-llm {
+  background: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+.chat-delete-button {
+  background: #fc9999;
+  margin-left: auto;
+  padding-left: 1rem;
+}
+.chat-send-button {
+  background: #F9F6EE;
+  border-radius: 0.45rem;
+  margin-left: 1rem;
+  border: 0.5px solid lightgrey;
+}
+
+
 .div-experience-education-history{
   display: flex;
   flex-direction: column;
@@ -68,5 +142,8 @@ body {
     }
     .div-img-aboutme{
       margin-top: 0rem;
+    }
+    .chatFlex{
+      align-items: center;
     }
   }
