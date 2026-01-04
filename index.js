@@ -48,7 +48,7 @@ app.get("/experience", (req, res) => {
 
 app.get("/chat", async (req, res) => {
     try {
-        const response = await axios.get("http://localhost:9090/api/obtain_history/"+ req.sessionID);
+        const response = await axios.get(process.env.BACKEND_URL+"/api/obtain_history/"+ req.sessionID);
         const history = response.data.history;
         if (history.length > 0 ){
             res.status(200).render("chat.ejs", {history:history});
@@ -67,7 +67,7 @@ app.post("/chat-generate", async (req, res) => {
         return res.status(200).json({reply:"You question is to large! Please summarize your input in fewer words!!"});
     }
     try {
-        const reply = await axios.post("http://localhost:9090/api/generate_llm/"+req.sessionID, 
+        const reply = await axios.post(process.env.BACKEND_URL+"/api/generate_llm/"+req.sessionID, 
             {"user_input":question});
         const llmOutput = reply.data.llm_output;
         return res.status(200).json({reply:llmOutput});    
@@ -80,8 +80,8 @@ app.post("/chat-generate", async (req, res) => {
 app.post("/chat-delete-history", async (req, res) => {
     const sessionID = req.sessionID;
     try {
-        const reply = await axios.delete("http://localhost:9090/api/delete_session/"+sessionID);
-        res.redirect("/chat");
+        const reply = await axios.delete(process.env.BACKEND_URL+"/api/delete_session/"+sessionID);
+        res.status(200).redirect("/chat");
     } catch (err) {
         console.log(err);
     }
