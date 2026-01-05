@@ -93,7 +93,9 @@ body {
 }
 
 .img-aboutme {
-    border-radius: 10%
+    border-radius: 10;
+    width: 150px; 
+    height: auto;
   }
 
 .chat-message-user {
@@ -124,7 +126,10 @@ body {
   margin-left: 1rem;
   border: 0.5px solid lightgrey;
 }
-
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
 
 .div-experience-education-history{
   display: flex;
@@ -145,5 +150,10 @@ body {
     }
     .chatFlex{
       align-items: center;
+    }
+    .img-aboutme{
+      border-radius: 10;
+      width: 500px; 
+      height: auto;
     }
   }

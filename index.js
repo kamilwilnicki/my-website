@@ -84,6 +84,7 @@ app.post("/chat-delete-history", async (req, res) => {
         res.status(200).redirect("/chat");
     } catch (err) {
         console.log(err);
+        res.status(200).redirect("/chat");
     }
 })
 
