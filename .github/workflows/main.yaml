@@ -1,0 +1,30 @@
+name: Deploy image to registry
+
+env: 
+  PROJECT_ID: powerful-star-471309-u8
+  DOCKER_IMAGE_URL: us-east1-docker.pkg.dev/powerful-star-471309-u8/website/frontend
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  dockerize-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Google Cloud Auth
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+          project_id: ${{ env.PROJECT_ID }}
+
+      - name: Build and Push Docker Image
+        run: |
+            docker build -t ${{ env.DOCKER_IMAGE_URL}}:latest -f Dockerfile .
+            gcloud auth configure-docker us-east1-docker.pkg.dev
+            docker push ${{ env.DOCKER_IMAGE_URL }}:latest
