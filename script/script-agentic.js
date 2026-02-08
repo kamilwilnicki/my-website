@@ -47,7 +47,9 @@ function showLoading() {
 function hideLoading() {
   document.getElementById("loading-overlay").classList.add("hidden");
 }
-
+// function sleep(ms) {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
 form.addEventListener("submit", async function(e) {
     e.preventDefault();
 

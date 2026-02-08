@@ -161,7 +161,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   z-index: 1000;
+}
+
+.loading-title{
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-subtitle{
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
 
 /* Ensure this actually hides it */
