@@ -82,14 +82,14 @@ app.post("/agentic-ai", async (req, res) => {
         const response = await axios.post(process.env.BACKEND_URL+"/api/generate_agentic_report/"+req.sessionID,
             {"user_input":textPrompt},
             {timeout: 3 * 60 * 1000});
-        const agenticOutput = reply.data.llm_output;
+        const agenticOutput = response.data.llm_output;
         if (agenticOutput == textPrompt){
             return res.status(200).json({reply:"<h1>Your prompt is not related to the stocks. Please include real stocks in you form</h1>"})
         }
         return res.status(200).json({reply:agenticOutput});
     } catch (err) {
         console.log(err);
-        res.status(200).json({reply:"<h1> There is something wrong with agentic-ai service. Please try later! :( </h1>"});
+        res.status(200).json({reply:"<h1> You have asked for analysis more than 2 times! Please try again after 60 minutes. </h1>"});
     }
 })
 

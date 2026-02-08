@@ -40,6 +40,14 @@ addBtn.addEventListener("click", function(e) {
 
 });
 
+function showLoading() {
+  document.getElementById("loading-overlay").classList.remove("hidden");
+}
+
+function hideLoading() {
+  document.getElementById("loading-overlay").classList.add("hidden");
+}
+
 form.addEventListener("submit", async function(e) {
     e.preventDefault();
 
@@ -61,8 +69,8 @@ form.addEventListener("submit", async function(e) {
         alert("Please enter no more stock symbol than 5!")
         return;
     }
-    console.log("Sending stocks:", stocks);
     try {
+        showLoading();
         const response = await axios.post("/agentic-ai", {
         stocks: stocks
         });
@@ -70,10 +78,12 @@ form.addEventListener("submit", async function(e) {
         document.querySelectorAll('.stockChoose').forEach(el => el.remove());
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlAnalysis,"text/html");
-        const element = document.getElementById("stockAnalysisPage");
+        const element = document.getElementById("AnalysisContent");
         element.replaceChildren();
         element.appendChild(doc.body.firstElementChild);
     } catch(err) {
         console.error("Error stocks:",err);
+    } finally {
+        hideLoading();
     }
 });

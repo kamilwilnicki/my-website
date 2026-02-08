@@ -150,6 +150,41 @@ body {
   align-items: center;
 }
 
+#stockAnalysisPage {
+  position: relative;
+}
+
+/* Overlay sits on top of ONLY #stockAnalysisPage */
+#loading-overlay {
+  position: absolute;
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Ensure this actually hides it */
+.hidden {
+  display: none !important;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
   @media (min-width: 1260px){
     .p-aboutme {
         font-size: 1.2rem;
