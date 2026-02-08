@@ -120,6 +120,18 @@ body {
   margin-left: auto;
   padding-left: 1rem;
 }
+
+.chat-add-another-stock-button {
+  background: #E5E7EB;
+  margin-left: auto;
+  padding-left: 1rem;
+}
+
+.stock-create-analysis-button {
+  background: #477ed6;
+  margin-left: auto;
+  padding-left: 1rem;
+}
 .chat-send-button {
   background: #F9F6EE;
   border-radius: 0.45rem;

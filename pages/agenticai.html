@@ -87,7 +87,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="/chat" class="nav-link text-secondary">
+                  <a href="/chat" class="nav-link text-white">
                     <svg
                       class="bi d-block mx-auto mb-1"
                       width="24"
@@ -99,7 +99,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="/agentic-ai" class="nav-link text-white">
+                  <a href="/agentic-ai" class="nav-link text-secondary">
                     <svg
                       class="bi d-block mx-auto mb-1"
                       width="24"
@@ -117,49 +117,41 @@
       </section>
         <section id="chat"  class="flex-grow-1 d-flex">
             <div class="flex-grow-1 chatFlex">
-                <div class="chat-main-background" id="chatMessages">
-                  <div class="chat-message-llm">Hi, I’m an AI assistant here to help.
-Ask me any questions about Kamil Wilnicki, and I’ll answer using relevant available information.</div>
-                    <% for (let message of history) {%>
-                        <% if (message.role == "user") { %>
-                            <div class="chat-message-user"> 
-                                <%= message.content %>     
-                            </div>
-                        <%} else { %>
-                            <div class="chat-message-llm"> 
-                                <%= message.content %>     
-                            </div>
-                        <% } %>
-                    <% } %>
+                <div class="chat-main-background" id="stockAnalysisPage">
                 </div>
             </div>
         </section>
         <div class="flex-user-chat">
             <div class="chat-user-input-div split card mb-3 shadow-sm rounded-4 border-0">
-                <div class="py-2 text-bg-white">
-                    <form id="chatForm" style="display: flex;">
-                    <input
-                        type="text"
-                        id="chatInput"
-                        class="form-control div-second-header-experience"
-                        placeholder="Type a message and press Enter"
-                        autocomplete="off"
-                    />
-                    <button class="chat-send-button">
-                      Send
-                    </button>
-                    </form>
-                 </div>
-              <div class="py-2" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <form action="/chat-delete-history" method="post">
-                  <button type="submit" class="chat-delete-button form-control"> Delete chat history</button>
+                <form id="chatForm">
+                  <div id="stockList">
+                    <div class="py-2 text-bg-white stockChoose" style="display: flex;">
+                        <input
+                            type="text"
+                            name="stocks[]"
+                            class="form-control div-second-header-experience"
+                            placeholder="Enter stock symbol (e.g. AAPL)"
+                            autocomplete="off"
+                        />
+                        <button type="button" class="chat-send-button" id="firstBtn">
+                          Remove
+                        </button>
+                    </div>
+                  </div>
+                  <div class="py-2" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <button type="button" id="addStockBtn" class="chat-add-another-stock-button form-control">
+                          Add another stock
+                        </button>
+                  </div>
+                  <div class="py-2" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <button type="submit" class="stock-create-analysis-button form-control"> Generate stock analysis </button>
+                  </div>
                 </form>
-              </div>
             </div>
         </div>
         <footer class="py-2 my-2 footer mt-auto bg-light">
             <p class="text-center text-body-secondary mt-3">&copy; 2026 Kamil Wilnicki. All rights reserved.</p>
         </footer>
-        <script type="module" src="/script/script-chat.js"></script>
+        <script type="module" src="/script/script-agentic.js"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@ app.use(
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/css", express.static(path.join(__dirname, "css")));
 app.use("/script", express.static(path.join(__dirname, "script")));
-app.use("/", express.static(path.join(__dirname, "pages"))); // serves index.html too
+app.use("/", express.static(path.join(__dirname, "pages")));
 
 app.get("/", (req, res) => {
     res.status(200).sendFile(process.cwd()+"/pages/index.html")
@@ -58,6 +58,36 @@ app.get("/chat", async (req, res) => {
     } catch (err) {
         console.log(err);
         res.status(200).render("chat.ejs", {history:[]});
+    }
+})
+
+app.get("/agentic-ai", (req, res) => {
+    res.status(200).sendFile(process.cwd()+"/pages/agenticai.html")
+})
+
+app.post("/agentic-ai", async (req, res) => {
+    const stocks = req.body.stocks;
+    let textPrompt = "Please provide an analysis of those stocks: ";
+    let i = 0;
+    for (const stock of stocks){
+        textPrompt = textPrompt + stock + ",";
+        i++;
+    }
+    if (i > 5){
+        res.status(200).json({reply:"<h1>You have asked for an analysis based on to many stocks. Please use up to 5 stocks</h1>"});
+    } else if (i == 0){
+        res.status(200).json({reply:"<h1>You have asked for an analysis based on no stocks. Please use up to 5 stocks</h1>"});
+    }
+    try {
+        const response = await axios.post(process.env.BACKEND_URL+"/api/generate_agenticai"+req.sessionID,
+            {"user_input":question});
+        const agenticOutput = reply.data.llm_output;
+        if (agenticOutput == textPrompt){
+            return res.status(200).json({reply:"<h1>Your prompt is not related to the stocks. Please include real stocks in you form</h1>"})
+        }
+        return res.status(200).json({reply:agenticOutput})
+    } catch (err) {
+        res.status(200).json({reply:"<h1> There is something wrong with agentic-ai service. Please try later! :( </h1>"})
     }
 })
 
