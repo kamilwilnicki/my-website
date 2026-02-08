@@ -79,7 +79,7 @@ app.post("/agentic-ai", async (req, res) => {
         res.status(200).json({reply:"<h1>You have asked for an analysis based on no stocks. Please use up to 5 stocks</h1>"});
     }
     try {
-        const response = await axios.post(process.env.BACKEND_URL+"/api/generate_agenticai"+req.sessionID,
+        const response = await axios.post(process.env.BACKEND_URL+"/api/generate_agentic_report/"+req.sessionID,
             {"user_input":textPrompt});
         const agenticOutput = reply.data.llm_output;
         if (agenticOutput == textPrompt){
