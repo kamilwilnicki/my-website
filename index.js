@@ -80,7 +80,8 @@ app.post("/agentic-ai", async (req, res) => {
     }
     try {
         const response = await axios.post(process.env.BACKEND_URL+"/api/generate_agentic_report/"+req.sessionID,
-            {"user_input":textPrompt});
+            {"user_input":textPrompt},
+            {timeout: 3 * 60 * 1000});
         const agenticOutput = reply.data.llm_output;
         if (agenticOutput == textPrompt){
             return res.status(200).json({reply:"<h1>Your prompt is not related to the stocks. Please include real stocks in you form</h1>"})
