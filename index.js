@@ -85,9 +85,10 @@ app.post("/agentic-ai", async (req, res) => {
         if (agenticOutput == textPrompt){
             return res.status(200).json({reply:"<h1>Your prompt is not related to the stocks. Please include real stocks in you form</h1>"})
         }
-        return res.status(200).json({reply:agenticOutput})
+        return res.status(200).json({reply:agenticOutput});
     } catch (err) {
-        res.status(200).json({reply:"<h1> There is something wrong with agentic-ai service. Please try later! :( </h1>"})
+        console.log(err);
+        res.status(200).json({reply:"<h1> There is something wrong with agentic-ai service. Please try later! :( </h1>"});
     }
 })
 
